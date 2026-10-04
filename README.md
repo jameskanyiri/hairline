@@ -1,6 +1,6 @@
 # hairline
 
-Twenty-one isometric line figures that answer the pointer. For React and for anything with a DOM.
+Twenty-two isometric line figures that answer the pointer. For React and for anything with a DOM.
 
 [![npm](https://img.shields.io/npm/v/@lucasmarkes/hairline)](https://www.npmjs.com/package/@lucasmarkes/hairline)
 [![CI](https://github.com/lucasmarkes/hairline/actions/workflows/ci.yml/badge.svg)](https://github.com/lucasmarkes/hairline/actions/workflows/ci.yml)
@@ -76,6 +76,7 @@ A figure draws into the element you give it, at the element's width and a 5:4 as
 | `router` | `Router` | A router with its antennas up. Each antenna leans toward the pointer, the nearest most. | The lean spreads further. |
 | `solar` | `Solar` | Twelve solar panels on poles. The panels near the pointer turn to face it, the nearest most. | The sun reaches more panels. |
 | `turbine` | `Turbine` | A wind turbine whose rotor always turns. Hovering slows it without stopping it, so a blade can be followed. | The rotor slows down more. |
+| `battery` | `Battery` | A pack of five battery cells. The pointer's height sets the charge; the cells nearest it fill or drain the most. | The charge spreads to more cells. |
 
 ## Options
 
@@ -119,7 +120,7 @@ The figure's styles have no specificity, so any rule of yours wins without `!imp
 
 ## Make your own
 
-`hairline-create` is a skill for coding agents. Give it an idea and it draws a new figure to Hairline's ten rules, on the same engine as the twenty-one above, as one HTML file.
+`hairline-create` is a skill for coding agents. Give it an idea and it draws a new figure to Hairline's ten rules, on the same engine as the twenty-two above, as one HTML file.
 
 ```sh
 npx skills add lucasmarkes/hairline

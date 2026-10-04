@@ -1,4 +1,5 @@
 import { create, type Figure, type HairlineOptions } from "./mount";
+import { mount as batteryEngine } from "./figures/battery";
 import { mount as branchesEngine } from "./figures/branches";
 import { mount as cabinetEngine } from "./figures/cabinet";
 import { mount as dishEngine } from "./figures/dish";
@@ -22,7 +23,7 @@ import { mount as turntableEngine } from "./figures/turntable";
 import { mount as vaultEngine } from "./figures/vault";
 
 /**
- * @lucasmarkes/hairline — twenty-one isometric line figures that answer the pointer.
+ * @lucasmarkes/hairline — twenty-two isometric line figures that answer the pointer.
  *
  * One function per figure. Each takes an element and the same options, draws
  * into the element, and returns `{ update, destroy }`. Each function names
@@ -239,5 +240,15 @@ export function turbine(el: HTMLElement, options?: HairlineOptions): Figure {
     label: "A wind turbine that always turns. Hovering slows the rotor without stopping it, so a blade can be followed round.",
     rest: "rest",
     engine: turbineEngine,
+  }, el, options);
+}
+
+/** A pack of five battery cells. The pointer's height sets the charge, and the cells nearest it fill or drain the most. `intensity` spreads the charge to more cells. */
+export function battery(el: HTMLElement, options?: HairlineOptions): Figure {
+  return create({
+    id: "battery",
+    label: "A pack of five battery cells. The pointer's height sets the charge, and the cells nearest it fill or drain the most.",
+    rest: "rest",
+    engine: batteryEngine,
   }, el, options);
 }

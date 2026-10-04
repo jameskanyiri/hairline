@@ -8,7 +8,7 @@
 
 import { spell } from "./words";
 
-export type FigureId = "riffle" | "terrain" | "exploded" | "phosphor" | "slow" | "turntable" | "keyboard" | "elevator" | "phone" | "laptop" | "terminal" | "cabinet" | "branches" | "vault" | "lockers" | "padlock" | "patch" | "dish" | "router" | "solar" | "turbine";
+export type FigureId = "riffle" | "terrain" | "exploded" | "phosphor" | "slow" | "turntable" | "keyboard" | "elevator" | "phone" | "laptop" | "terminal" | "cabinet" | "branches" | "vault" | "lockers" | "padlock" | "patch" | "dish" | "router" | "solar" | "turbine" | "battery";
 
 export type FigureDoc = {
   id: FigureId;
@@ -169,9 +169,16 @@ export const FIGURES: FigureDoc[] = [
     stronger: "The rotor slows down more.",
     parameter: { name: "rate", unit: "× normal speed" },
   },
+  {
+    id: "battery",
+    name: "Battery",
+    summary: "A pack of five battery cells. The pointer's height sets the charge; the cells nearest it fill or drain the most.",
+    stronger: "The charge spreads to more cells.",
+    parameter: { name: "spread", unit: "cells" },
+  },
 ];
 
-/** How many figures the package has, as the prose writes it: "twenty-one". */
+/** How many figures the package has, as the prose writes it: "twenty-two". */
 export const COUNT = spell(FIGURES.length);
 
 /** Each figure's number at intensity 0, 0.5 and 1: a copy of the package's table. */
@@ -197,6 +204,7 @@ export const INTENSITY: Record<FigureId, readonly [number, number, number]> = {
   router: [0.5, 1.5, 3],
   solar: [1, 1.8, 3],
   turbine: [0.6, 0.25, 0.08],
+  battery: [0.5, 1.5, 3],
 };
 
 /** A number with its unit, as the docs' table and /llms.txt write it: "40 ms", "0.2× normal speed". */

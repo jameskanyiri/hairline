@@ -2,10 +2,10 @@ import {
   forwardRef, useCallback, useEffect, useLayoutEffect, useRef,
   type ComponentPropsWithoutRef, type ForwardRefExoticComponent, type RefAttributes,
 } from "react";
-import { branches, cabinet, dish, elevator, exploded, keyboard, laptop, lockers, padlock, patch, phone, phosphor, riffle, router, slow, solar, terminal, terrain, turbine, turntable, vault, type Figure, type HairlineOptions } from "./index";
+import { battery, branches, cabinet, dish, elevator, exploded, keyboard, laptop, lockers, padlock, patch, phone, phosphor, riffle, router, slow, solar, terminal, terrain, turbine, turntable, vault, type Figure, type HairlineOptions } from "./index";
 
 /**
- * @lucasmarkes/hairline/react — the twenty-one figures as components.
+ * @lucasmarkes/hairline/react — the twenty-two figures as components.
  *
  * A component renders one empty `<div>` and mounts the figure on it in a
  * layout effect, so on the server the box is there and the drawing is not.
@@ -95,3 +95,5 @@ export const Router = make("Router", router);
 export const Solar = make("Solar", solar);
 /** A wind turbine that always turns. Hovering slows the rotor without stopping it, so a blade can be followed round. `intensity` slows it more. */
 export const Turbine = make("Turbine", turbine);
+/** A pack of five battery cells. The pointer's height sets the charge, and the cells nearest it fill or drain the most. `intensity` spreads the charge to more cells. */
+export const Battery = make("Battery", battery);

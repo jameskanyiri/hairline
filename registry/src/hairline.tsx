@@ -101,3 +101,7 @@ export function Solar({ style, ...props }: ComponentProps<typeof Hairline.Solar>
 export function Turbine({ style, ...props }: ComponentProps<typeof Hairline.Turbine>) {
   return <Hairline.Turbine style={{ ...tokens, ...style }} {...props} />;
 }
+
+export function Battery({ style, ...props }: ComponentProps<typeof Hairline.Battery>) {
+  return <Hairline.Battery style={{ ...tokens, ...style }} {...props} />;
+}

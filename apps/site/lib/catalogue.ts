@@ -74,13 +74,14 @@ export const SHELVES: Shelf[] = [
     id: "energy", title: "Energy", color: "#84cc16", figures: [
       drawn("solar"),
       drawn("turbine"),
+      drawn("battery"),
     ],
   },
 ];
 
 export const ENTRIES: Entry[] = SHELVES.flatMap((s) => s.figures);
 
-/** "Eight shelves, twenty-one figures" */
+/** "Eight shelves, twenty-two figures" */
 export function tally(): string {
   return `${cap(spell(SHELVES.length))} shelves, ${spell(ENTRIES.length)} figures`;
 }

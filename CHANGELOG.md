@@ -14,6 +14,9 @@ Every release of `@lucasmarkes/hairline`. The format follows
 - `turbine` and `Turbine`: a wind turbine whose rotor always turns. Hovering
   slows it without stopping it, and the blade nearest the pointer is bright,
   to be followed round. A stronger `intensity` slows the rotor more.
+- `battery` and `Battery`: a pack of five battery cells. The pointer's height
+  sets the charge, and the cells nearest it fill or drain the most. A stronger
+  `intensity` spreads the charge to more cells.
 
 ## 0.2.0 - 2026-10-03
 
