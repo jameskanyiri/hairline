@@ -97,3 +97,7 @@ export function Router({ style, ...props }: ComponentProps<typeof Hairline.Route
 export function Solar({ style, ...props }: ComponentProps<typeof Hairline.Solar>) {
   return <Hairline.Solar style={{ ...tokens, ...style }} {...props} />;
 }
+
+export function Turbine({ style, ...props }: ComponentProps<typeof Hairline.Turbine>) {
+  return <Hairline.Turbine style={{ ...tokens, ...style }} {...props} />;
+}
